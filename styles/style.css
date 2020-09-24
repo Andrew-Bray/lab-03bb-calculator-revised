@@ -1,10 +1,10 @@
 
 body {
     --color1: #ffffff;
-    --color2: #ffffff;
-    --color3: #ffffff;
+    --color2: #cbc5c5;
+    --color3: #96edb6f3;
     --color4: #ffffff;
-    --color5: #ffffff;
+    --color5: #e69898;
 
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
     /* --color1: hsla(349, 69%, 76%, 1);
@@ -21,11 +21,21 @@ body {
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
+    --gutter: 15px;
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #2222;
+    height: var(--header-height);
+    box-shadow: var(--shadow);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
 }
 
 main {
@@ -51,26 +61,12 @@ section {
     border: solid 2px var(--color1);
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    background-color: #2222;
-    animation-name: color;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4rem;
-}
-
 footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-
 
 h2 {
     font-size: 1.8rem;
@@ -83,10 +79,6 @@ h2 {
 
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
 }
 
 
@@ -109,7 +101,10 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+.button:hover {
+    background-color: coral;
 
+}
 .result {
     width: 100px;
 }
@@ -119,6 +114,13 @@ footer {
     flex-direction: row;
     align-content: center;
    
+}
+
+.color-ani {
+    background-color: #2222;
+    animation-name: color;
+    animation-duration: 1.3s;
+    animation-iteration-count: 3;
 }
 
 @keyframes color {
@@ -147,7 +149,7 @@ footer {
         background-color: #f4425d;
     }
     100% {
-      background-color: #2222 ;
+      background-color: rgba(34, 34, 34, 0.18) ;
     }
   }
  /*( @keyframes pulse {
